@@ -1,0 +1,269 @@
+@font-face {
+    font-family: "my_Avenir";
+    src: url('AvenirLT-BlackOblique.eot');
+    src: url('AvenirLT-BlackOblique.eot?#iefix') format('embedded-opentype'),
+         url('AvenirLT-BlackOblique.woff') format('woff'),
+         url('AvenirLT-BlackOblique.ttf') format('truetype'),
+         url('AvenirLT-BlackOblique.svg#AvenirLT-BlackOblique') format('svg');
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	/*font-family: "my_Avenir";*/
+	font-weight: 400;
+	font-size:14pt;
+	font-style: italic;
+	background-color: #E6E6E6;
+	text-transform: uppercase;
+	color: white;
+}
+
+a:link,
+a:visited,
+a:active {
+	color: white;
+}
+
+a:hover {
+	background-color: #3FA9F5;
+	text-decoration: none;
+}
+
+#center-column {
+	position: relative;
+	margin: 100px auto;
+	width: 550px;
+}
+
+div.split { margin-top: 100px; clear: both; }
+
+/* ---- h1 */
+/* Using a left border + left shift for h1 multi-line inline element padding.
+Usage: <div class="inline-h1"><h1><strong>lorem</strong></h1></div> */
+
+div.inline-h1 {
+	border-left: 20px solid white;
+	display: inline-block;
+	margin: 20px 0;
+}
+
+h1 {
+	font-size: 45pt;
+	color: #E6E6E6; /* background gray */
+	background-color: white;
+	display: inline;
+}
+
+h1 strong {
+	font-weight: normal;
+	position: relative;
+	left: -15px;
+}
+
+/* ---- End h1 ---- */
+
+/* ---- h2 */
+/* Using a left border + left shift for h2 multi-line inline element padding.
+Usage: <div class="inline-h2"><h2><strong>lorem</strong></h2></div> */
+
+div.inline-h2 {
+	border-left: 10px solid white;
+	display: inline-block;
+	margin: 20px 0;
+}
+
+h2,
+h2 a:link,
+h2 a:visited,
+h2 a:active {
+	font-size: 24pt;
+	/*color: #3FA9F5;*/ /* site blue */
+	color: #E6E6E6; /* background gray */
+	background-color: white;
+	display: inline;
+}
+
+h2 strong {
+	font-weight: normal;
+	position: relative;
+	left: -7px;
+}
+
+h2 a:hover {}
+
+/* ---- End h2 ---- */
+
+/* ---- nav */
+/* Using a left border + left shift for div multi-line inline element padding.
+Usage:
+<ul class="nav">
+<li class="inline-li select"><div><strong>lorem</strong></div></li> 
+<li class="inline-li"><div><strong>lorem</strong></div></li>
+</ul>
+*/
+
+ul.nav {
+	background-color: #E6E6E6; /* background gray */
+	list-style-type: none;
+	padding: 20px 0 20px 0;
+	margin: 0;
+	width: 100%;
+	
+	z-index:90;
+}
+
+ul.fixed {
+	position: fixed;
+	top: 0;
+}
+
+ul.absolute {
+	position: fixed;
+	top: 0;
+}
+
+li.inline-li {
+	border-left: 10px solid white;
+	display: block;
+}
+
+li.inline-li div,
+li.inline-li div a:link,
+li.inline-li div a:visited,
+li.inline-li div a:active {
+	font-size: 24pt;
+	color: #E6E6E6; /* background gray */
+	background-color: white;
+	display: inline;
+	
+	text-decoration: none;
+}
+
+li.inline-li div strong {
+	font-weight: normal;
+	position: relative;
+	left: -7px;
+}
+
+li.inline-li div a.select,
+li.inline-li div a:hover {
+	color: #3FA9F5; /* site blue */
+}
+
+/* ---- End nav ---- */
+
+/* ----  p */
+/* Using a left border + left shift for p multi-line inline element padding.
+Usage: <div class="inline-p"><p><strong>lorem</strong></p></div> */
+
+div.inline-p {
+	border-left: 10px solid white;
+	display: inline-block;
+	margin: 5px 0;
+}
+
+div.inline-p p {
+	font-size: 14pt;
+	color: #808080; /* site dark gray */
+	background-color: white;
+	display: inline;
+	font-weight: lighter;
+}
+
+div.inline-p p strong {
+	position: relative;
+	left: -7px;	
+}
+
+div.inline-p a:link,
+div.inline-p a:visited,
+div.inline-p a:active {
+	color: #3FA9F5; /* site blue */
+	text-decoration: none;
+}
+
+div.inline-p a:hover {
+	background-color: #3FA9F5;
+	color: white;
+	text-decoration: none;
+}
+
+/* ---- End p ---- */
+
+span.blue {
+	color: #3FA9F5; /* site blue */
+}
+
+span.time {
+	color: #999999; /* site medium gray */
+	/*margin-left: 5px;*/
+	display: inline-block;
+	padding-right: 7px;
+}
+
+/* Projects caroussel */
+
+div.project-carrousel {}
+
+/* Projects display */
+
+div.project {
+	width: 170px;
+	float: left;
+	margin: 0 10px 10px 0;
+}
+
+/* top */
+div.project-image {
+	position: relative;
+}
+
+div.project-image img {
+	border: 10px solid white;
+}
+
+div.project-image div.tag {
+	color: #999999; /* site medium gray */
+	background-color: white;
+	display: inline-block;
+	padding: 5px;
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+}
+
+/* bottom */
+div.project-text {
+	font-size: 12pt;
+	padding: 10px;
+}
+
+div.project-text p {
+	margin: 0;
+}
+
+/* ---- Misc */
+.pn-tag {
+	font-size: 24pt;
+	color: #E6E6E6; /* background gray */
+	background-color: white;
+	padding: 3px 6px 3px 6px;
+	
+	position: fixed;
+	top: 0;
+	margin-left: 450px;
+	z-index:100;
+
+}
+
+.pn-tag a:link,
+.pn-tag a:visited,
+.pn-tag a:active {
+	color: #E6E6E6; /* background gray */
+	text-decoration: none;
+}
+
+.pn-tag a:hover {
+	background-color: white;
+	color: #3FA9F5; /* site blue */
+}

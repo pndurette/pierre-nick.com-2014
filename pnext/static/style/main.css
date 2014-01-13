@@ -1,15 +1,4 @@
-@font-face {
-    font-family: "my_Avenir";
-    src: url('AvenirLT-BlackOblique.eot');
-    src: url('AvenirLT-BlackOblique.eot?#iefix') format('embedded-opentype'),
-         url('AvenirLT-BlackOblique.woff') format('woff'),
-         url('AvenirLT-BlackOblique.ttf') format('truetype'),
-         url('AvenirLT-BlackOblique.svg#AvenirLT-BlackOblique') format('svg');
-}
-
 body {
-	font-family: 'Lato', sans-serif;
-	/*font-family: "my_Avenir";*/
 	font-weight: 400;
 	font-size: 14pt;
 	font-style: italic;
@@ -18,6 +7,14 @@ body {
 	color: white;
     padding: 0;
 }
+
+/* Bootstrap doing things I don't want */
+body, h1, h2, h3, h3, h4, h5 {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.2;
+}
+
+section { padding: 20px; }
 
 p { margin: 0; }
 
@@ -213,9 +210,7 @@ div.project-carrousel {}
 /* Projects display */
 
 div.project {
-	width: 170px;
-	float: left;
-	margin: 0 10px 10px 0;
+	/*margin: 0 10px 10px 0;*/
 }
 
 /* top */
@@ -274,7 +269,7 @@ div.project-text p {
 }
 
 /* Tablet / Phone-ish */
-@media (max-width: 600px) { 
+/*@media (max-width: 600px) { 
     body { font-size: 80%; }
     
     section { min-height: 100%; }
@@ -285,6 +280,6 @@ div.project-text p {
         width: auto;
         clear: both;
     }
-}
+}*/
 
 

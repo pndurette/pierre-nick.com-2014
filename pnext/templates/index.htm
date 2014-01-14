@@ -3,7 +3,9 @@
 <head>
 	<title>Pierre Nicolas Durette</title>
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=0.75, minimum-scale=0.75, maximum-scale=0.75">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
     <!-- Bootstrap -->
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel='stylesheet' type='text/css'>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
@@ -20,19 +22,20 @@
     <script src="static/js/main.js"></script>
 </head>
 <body>
-<div id="main">
+<div class="container" id="main">
 <section style="background-color:green;">
 <div class="row">
-<div class="col-md-6 col-md-offset-3">
+<div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae orci ac justo cursus.</p>
-    <div class="inline-h1" id="name-title"><h1><strong>Pierre Nicolas<br/>Durette</strong></h1></div>
+    <div class="inline-h1" id="name-title"><h1><strong>Pierre Nick<br/>Durette</strong></h1></div>
 </div> <!--/col-->
 </div> <!--/row-->
 </section>
 
 <section style="background-color:blue;">
 <div class="row">
-<div class="col-md-6 col-md-offset-3">
+<div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
+    <div class="inline-h1" id="name-title"><h1><strong>Twitter</strong></h1></div>
     <div class="inline-p"><p><strong>Big intense revealing week ahead! <a href="#">#WWDC</a> and <span class="blue">#E3!</span><span class="time">5 hours ago</span></strong></p></div>
 	<div class="inline-p"><p><strong>Great read: "The Anatomy of a Notification". Totally agree. RT <span class="blue">@rands</span> Well, my ass is vibrating, so it must be important: <span class="blue">j.mp/kxnh0l</span></strong></p><span class="time">5 hours ago</span></div>
 	<div class="inline-p"><p><strong><span class="blue">#html</span>: How to set padding for each line of a multi-line inline element: <span class="blue">http://bit.ly/kVqZZ6</span> Most elegant solution I've found.</strong></p><span class="time">5 hours ago</span></div>
@@ -43,21 +46,39 @@
 
 <section style="background-color:red; overflow: hidden">
 <div class="row">
-<div class="col-md-6 col-md-offset-3">
-<div class="col-xs-6 col-md-4 project">
-		<div class="project-image"><img src="static/style/test-2.jpg"/><div class="tag">Test</div></div>
-		<div class="project-text"><p>Lorem ipsum dolor sit amet.</p></div>
-	</div>
-	
-	<div class="col-xs-6 col-md-4 project">
-		<div class="project-image"><img src="static/style/test-2.jpg"/><div class="tag">Test</div></div>
-		<div class="project-text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam massa nisis</p></div>
-	</div>
-	
-	<div class="col-xs-6 col-md-4 project">
-		<div class="project-image"><img src="static/style/test-2.jpg"/><div class="tag">Test</div></div>
-		<div class="project-text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam massa nisis</p></div>
-    </div>
+<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+    <div class="inline-h1" id="name-title"><h1><strong>Projects</strong></h1></div>
+    <div class="row" style="padding: 0 15px;">
+        <div class="col-xs-12 col-sm-5 col-md-5 project">
+        <div class="project-image"><img src="static/style/test-2.jpg" class="img-responsive"/></div>
+        <div class="project-text"><div class="tag">Test</div><p>Lorem ipsum dolor sit amet.</p></div>
+	    </div>
+
+        <div class="col-xs-12 col-sm-5 col-md-5 project">
+        <div class="project-image"><img src="static/style/test-2.jpg" class="img-responsive"/></div>
+        <div class="project-text"><div class="tag">Test</div><p>Lorem ipsum dolor sit amet. Le pouvoir d'être.</p></div>
+	    </div>
+
+        <div class="col-xs-12 col-sm-5 col-md-5 project">
+		<div class="project-image"><img src="static/style/test-2.jpg" class="img-responsive"/></div>
+        <div class="project-text"><div class="tag">Test</div><p>Vestibulum tortor quam, feugiat vitae!</p></div>
+        </div>
+
+        <div class="col-xs-12 col-sm-5 col-md-5 project">
+        <div class="project-image"><img src="static/style/test-2.jpg" class="img-responsive"/></div>
+        <div class="project-text"><div class="tag">Test</div><p>Lorem ipsum dolor sit amet.</p></div>
+	    </div>
+
+        <div class="col-xs-12 col-sm-5 col-md-5 project">
+        <div class="project-image"><img src="static/style/test-2.jpg" class="img-responsive"/></div>
+        <div class="project-text"><div class="tag">Test</div><p>Lorem ipsum dolor sit amet. Le pouvoir d'être.</p></div>
+	    </div>
+
+        <div class="col-xs-12 col-sm-5 col-md-5 project">
+		<div class="project-image"><img src="static/style/test-2.jpg" class="img-responsive"/></div>
+        <div class="project-text"><div class="tag">Test</div><p>Lorem ipsum dolor sit amet. Vestibulum tortor quam, feugiat vitae!</p></div>
+        </div>
+    </div> <!--/row-->
 </div> <!--/col-->
 </div> <!--/row-->    
 </section>
@@ -65,7 +86,7 @@
 <section style="background-color:pink;">
 <div class="row">
 <div class="col-md-6 col-md-offset-3">
-    <p>Pellentesque habitac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifenant morbi tristique senectus et netus et malesuada fames d leo.</p>
+    <p>Pellentesque habitac turpis egestas.dTestultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifenant morbi tristique senectus et netus et malesuada fames d leo.</p>
 	
 	<p>Pellentesque habitac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifenant morbi tristique senectus et netus et malesuada fames d leo.</p>
  </div> <!--/col-->

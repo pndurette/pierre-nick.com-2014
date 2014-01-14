@@ -29,14 +29,6 @@ a:hover {
 	text-decoration: none;
 }
 
-.center-column {
-	position: relative;
-	margin: 0 auto;
-    padding: 20px 0 0 0;
-	max-width: 550px;
-    width: auto;
-}
-
 div.split { margin-top: 100px; clear: both; }
 
 /* ---- h1 */
@@ -95,65 +87,6 @@ h2 a:hover {}
 
 /* ---- End h2 ---- */
 
-/* ---- nav */
-/* Using a left border + left shift for div multi-line inline element padding.
-Usage:
-<ul class="nav">
-<li class="inline-li select"><div><strong>lorem</strong></div></li> 
-<li class="inline-li"><div><strong>lorem</strong></div></li>
-</ul>
-*/
-
-ul.nav {
-	background-color: #E6E6E6; /* background gray */
-	list-style-type: none;
-	padding: 20px 0 20px 0;
-	margin: 0;
-	width: 100%;
-	
-	z-index:90;
-}
-
-ul.fixed {
-	position: fixed;
-	top: 0;
-}
-
-ul.absolute {
-	position: fixed;
-	top: 0;
-}
-
-li.inline-li {
-	border-left: 10px solid white;
-	display: block;
-}
-
-li.inline-li div,
-li.inline-li div a:link,
-li.inline-li div a:visited,
-li.inline-li div a:active {
-	font-size: 200%;
-	color: #E6E6E6; /* background gray */
-	background-color: white;
-	display: inline;
-	
-	text-decoration: none;
-}
-
-li.inline-li div strong {
-	font-weight: normal;
-	position: relative;
-	left: -7px;
-}
-
-li.inline-li div a.select,
-li.inline-li div a:hover {
-	color: #3FA9F5; /* site blue */
-}
-
-/* ---- End nav ---- */
-
 /* ----  p */
 /* Using a left border + left shift for p multi-line inline element padding.
 Usage: <div class="inline-p"><p><strong>lorem</strong></p></div> */
@@ -203,39 +136,36 @@ span.time {
 	padding-right: 7px;
 }
 
-/* Projects caroussel */
-
-div.project-carrousel {}
-
 /* Projects display */
 
 div.project {
-	/*margin: 0 10px 10px 0;*/
+	margin: 0 5px 5px 0;
+    padding: 10px 5px 5px 0;
 }
 
-/* top */
 div.project-image {
 	position: relative;
+    float: left;
+    width: 25%;
 }
 
 div.project-image img {
-	border: 10px solid white;
+	border: 7px solid white;
 }
 
-div.project-image div.tag {
+div.project div.tag {
 	color: #999999; /* site medium gray */
 	background-color: white;
 	display: inline-block;
-	padding: 5px;
-	position: absolute;
-	right: 10px;
-	bottom: 10px;
+	padding: 3px;
+    margin: 0 0 3px 0;
 }
 
-/* bottom */
 div.project-text {
 	font-size: 95%;
-	padding: 10px;
+	padding: 0 0 0 10px;
+    float: left;
+    width: 75%;
 }
 
 div.project-text p {
@@ -267,19 +197,3 @@ div.project-text p {
 	background-color: white;
 	color: #3FA9F5; /* site blue */
 }
-
-/* Tablet / Phone-ish */
-/*@media (max-width: 600px) { 
-    body { font-size: 80%; }
-    
-    section { min-height: 100%; }
-
-    .center-column {
-	    margin: 0 auto;
-	    max-width: 350px;
-        width: auto;
-        clear: both;
-    }
-}*/
-
-

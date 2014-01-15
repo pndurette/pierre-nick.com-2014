@@ -14,7 +14,10 @@ body, h1, h2, h3, h3, h4, h5 {
     line-height: 1.2;
 }
 
-section { padding: 20px; }
+section {
+    padding: 20px;
+    background-size: 100%;
+}
 
 p { margin: 0; }
 

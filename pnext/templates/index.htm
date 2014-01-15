@@ -23,16 +23,17 @@
 </head>
 <body>
 <div class="container" id="main">
-    <section style="background-image:url('{{ backgrounds[0] }}');">
-<div class="row">
+<section style="background-image:url('{{ backgrounds[0].img }}');">
+<div class="row" style="padding: 5%">
 <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae orci ac justo cursus.</p>
+    <p>{{ quote }}</p>
     <div class="inline-h1" id="name-title"><h1><strong>Pierre Nick<br/>Durette</strong></h1></div>
+    <p>Hi! Montreal expat in Toronto. I do software, Web and other shenanigans. Used to photoblog, now I <a href="http://instagram.com/pierrenick">Instagram</a>.</p>
 </div> <!--/col-->
 </div> <!--/row-->
 </section>
 
-<section style="background-image:url('{{ backgrounds[1] }}');">
+<section style="background-image:url('{{ backgrounds[1].img }}');">
 <div class="row">
 <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
     <div class="inline-h1" id="name-title"><h1><strong>Twitter</strong></h1></div>
@@ -44,7 +45,7 @@
 </div> <!--/row-->
 </section>
 
-<section style="background-image:url('{{ backgrounds[2] }}');">
+<section style="background-image:url('{{ backgrounds[2].img }}');">
 <div class="row">
 <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
     <div class="inline-h1" id="name-title"><h1><strong>Projects</strong></h1></div>
@@ -83,12 +84,11 @@
 </div> <!--/row-->    
 </section>
 
-<section style="background-image:url('{{ backgrounds[3] }}');">
+<section style="background-image:url('{{ backgrounds[3].img }}');">
 <div class="row">
 <div class="col-md-6 col-md-offset-3">
-    <p>Pellentesque habitac turpis egestas.dTestultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifenant morbi tristique senectus et netus et malesuada fames d leo.</p>
-	
-	<p>Pellentesque habitac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifenant morbi tristique senectus et netus et malesuada fames d leo.</p>
+    <div class="inline-h1" id="name-title"><h1><strong>More</strong></h1></div>
+    <p><a href="http://www.linkedin.com/in/pndurette">LinkedIn</a></p>
  </div> <!--/col-->
 </div> <!--/row-->    
 </section>

@@ -14,12 +14,32 @@ body, h1, h2, h3, h3, h4, h5 {
     line-height: 1.2;
 }
 
-section {
-    padding: 20px;
-    background-size: 100%;
+a {
+    text-decoration: underline;
 }
 
-p { margin: 0; }
+section {
+    padding: 20px;
+}
+
+/* Manipulate background image based on viewport */
+@media screen and (orientation:portrait) {
+    section {
+        background-size: auto 100%;
+    }
+}
+/* Landscape */
+@media screen and (orientation:landscape) {
+    section {
+        background-size: 100% auto;
+        background-position: -25% /* So we don't get just the top */
+    }
+}
+
+p {
+    margin: 0;
+    text-shadow: 1px 1px 0px #808080;
+}
 
 a:link,
 a:visited,
@@ -87,6 +107,7 @@ h2 strong {
 }
 
 h2 a:hover {}
+div.inline-h2 p { text-shadow: none; }
 
 /* ---- End h2 ---- */
 
@@ -126,6 +147,9 @@ div.inline-p a:hover {
 	text-decoration: none;
 }
 
+div.inline-p p { text-shadow: none; }
+
+
 /* ---- End p ---- */
 
 span.blue {
@@ -137,6 +161,7 @@ span.time {
 	/*margin-left: 5px;*/
 	display: inline-block;
 	padding-right: 7px;
+    text-shadow: 1px 1px 0 #FFFFFF;
 }
 
 /* Projects display */

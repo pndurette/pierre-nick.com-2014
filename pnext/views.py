@@ -4,10 +4,13 @@ import contents
 
 @app.route('/')
 def index():
-    # Content: Instagram backgrounds
-    ig = contents.cached_instagram()
-    images = [ ig.get_random_img()['img'] for i in xrange(4)]
-    return render_template('index.htm', backgrounds=images)
+    # Content
+    ig = contents.cached_instagram() # Instagram backgrounds
+    q = contents.cached_quotes() # Quotes
+
+    images = [ ig.get_random_img() for i in xrange(4)] # 4 sections
+    quote = q.get_random_quote()
+    return render_template('index.htm', backgrounds=images, quote=quote)
 
 @app.before_request
 def before_request():

@@ -14,11 +14,12 @@ class MyInstagram:
         
         img_dicts = []
         for media_id in medias_ids_list:
+            print "Processing media '%s'" % media_id
             media = api.media(media_id)
             title = media.caption 
             img = media.images['standard_resolution'].url
             link = media.link
-            img_dicts.append({"title": title, "img": img, "link": link})
+            img_dicts.append({"title": title, "img": img, "link": link, "media_id": media_id})
         return img_dicts
 
     def get_random_img(self):

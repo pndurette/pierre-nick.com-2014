@@ -7,10 +7,12 @@ def index():
     # Content
     ig = contents.cached_instagram() # Instagram backgrounds
     q = contents.cached_quotes() # Quotes
+    p = contents.cached_projects() # Projects
 
-    images = [ ig.get_random_img() for i in xrange(4)] # 4 sections
+    images = ig.get_random_img_list_of_size(4) # 4 sections
     quote = q.get_random_quote()
-    return render_template('index.htm', backgrounds=images, quote=quote)
+    projects = p.get_projects()
+    return render_template('index.htm', backgrounds=images, quote=quote, projects=projects)
 
 @app.before_request
 def before_request():

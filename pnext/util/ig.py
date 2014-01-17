@@ -7,6 +7,7 @@ class MyInstagram:
     
     def __init__(self):
         self.__media_ids_list = json.load(open(MyInstagram.MEDIA_IDS_FILE))['media_ids']
+        self.__media_ids_list = list(set(self.__media_ids_list)) # Quick'n' dirty dupe removal
         self.__img_dicts = self.__get_img_dicts(self.__media_ids_list) 
 
     def __get_img_dicts(self, medias_ids_list):
@@ -24,3 +25,6 @@ class MyInstagram:
 
     def get_random_img(self):
         return random.choice(self.__img_dicts)
+
+    def get_random_img_list_of_size(self, size):
+        return random.sample(self.__img_dicts, size)

@@ -24,18 +24,19 @@
 </head>
 <body>
 <div class="container" id="main">
-<section style="background-image:url('{{ backgrounds[0].img }}');">
+<section style="background-image:url('{{ backgrounds[0].img_url }}');">
 <div class="row" style="padding-top: 5%">
 <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
-    <div class="inline-p"><p><strong>{{ quote }}</strong></p></div>
+    <div class="inline-p"><p><strong>{{ quote | safe }}</strong></p></div>
     <div class="inline-h1" id="name-title"><h1><strong>Pierre Nick<br/>Durette</strong></h1></div>
     <div class="inline-p"><p><strong>Hi! Montreal expat in Toronto. I do software, Web and other shenanigans. Aeon ago I used to photoblog and blog, now I <a href="http://instagram.com/pierrenick">Instagram</a> and <a href="http://www.twitter.com/pierrenick">Tweet</a>.</p></strong></div>
     <div class="chevron floating hidden-sm hidden-xs" onclick="$('#main').moveDown();"></div>
 </div> <!--/col-->
 </div> <!--/row-->
+<div class="inline-p sticky hidden-sm hidden-xs"><p><strong><a href="{{ backgrounds[0].link_url }}">{{ backgrounds[0].title }}</a></strong></p></div>
 </section>
 
-<section style="background-image:url('{{ backgrounds[1].img }}');">
+<section style="background-image:url('{{ backgrounds[1].img_url }}');">
 <div class="row">
 <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
     <div class="inline-h1" id="name-title"><h1><strong>Twitter</strong></h1></div>
@@ -43,43 +44,46 @@
 	<div class="inline-p"><p><strong>Great read: "The Anatomy of a Notification". Totally agree. RT <span class="blue">@rands</span> Well, my ass is vibrating, so it must be important: <span class="blue">j.mp/kxnh0l</span></strong></p><span class="time">5 hours ago</span></div>
 	<div class="inline-p"><p><strong><span class="blue">#html</span>: How to set padding for each line of a multi-line inline element: <span class="blue">http://bit.ly/kVqZZ6</span> Most elegant solution I've found.</strong></p><span class="time">5 hours ago</span></div>
 	<div class="inline-p"><p><strong>Helvetica Love Test Test Test Test Test <span class="blue">#fonts</span></strong></p><span class="time">5 hours ago</span></div>
-    <div class="chevron floating hidden-sm hidden-xs"></div>
+    <div class="chevron floating hidden-sm hidden-xs" onclick="$('#main').moveDown();"></div>
 </div> <!--/col-->
 </div> <!--/row-->
+<div class="inline-p sticky hidden-sm hidden-xs"><p><strong><a href="{{ backgrounds[1].link_url }}">{{ backgrounds[1].title }}</a></strong></p></div>
 </section>
 
-<section style="background-image:url('{{ backgrounds[2].img }}');">
+<section style="background-image:url('{{ backgrounds[2].img_url }}');">
 <div class="row">
 <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
     <div class="inline-h1" id="name-title"><h1><strong>Projects</strong></h1></div>
     <div class="row" style="padding: 0 15px;">
-        <div class="col-xs-12 col-sm-5 col-md-5 project">
-        <div class="project-image"><img src="static/style/test-2.jpg" class="img-responsive"/></div>
-        <div class="project-text"><div class="tag">Test</div><p>Lorem ipsum dolor sit amet.</p></div>
-	    </div>
 
+        {% for p in projects %}
         <div class="col-xs-12 col-sm-5 col-md-5 project">
-        <div class="project-image"><img src="static/style/test-2.jpg" class="img-responsive"/></div>
-        <div class="project-text"><div class="tag">Test</div><p>Lorem ipsum dolor sit amet. Le pouvoir d'être.</p></div>
-	    </div>
-
-        <div class="col-xs-12 col-sm-5 col-md-5 project">
-		<div class="project-image"><img src="static/style/test-2.jpg" class="img-responsive"/></div>
-        <div class="project-text"><div class="tag">Test</div><p>Vestibulum tortor quam, feugiat vitae!</p></div>
+            <a href="{{ p.link }}"><div class="project-image"><img src="static/pics/{{ p.image }}" class="img-responsive"/></div></a>
+            <div class="project-text"><a href="{{ p.link }}"><div class="tag">{{ p.title }}</div></a><p>{{ p.desc | safe }}</p></div>
         </div>
+        {% endfor %}
+
     </div> <!--/row-->
-    <div class="chevron floating hidden-sm hidden-xs"></div>
 </div> <!--/col-->
 </div> <!--/row-->    
+
+<div class="row">
+<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+    <div class="inline-p"><p><strong>Hang in there, more to come!</strong></p></div>
+    <div class="chevron floating hidden-sm hidden-xs" onclick="$('#main').moveDown();"></div>
+</div> <!--/col-->
+</div> <!--/row-->    
+<div class="inline-p sticky hidden-sm hidden-xs"><p><strong><a href="{{ backgrounds[2].link_url }}">{{ backgrounds[2].title }}</a></strong></p></div>
 </section>
 
-<section style="background-image:url('{{ backgrounds[3].img }}');">
+<section style="background-image:url('{{ backgrounds[3].img_url }}');">
 <div class="row">
 <div class="col-md-6 col-md-offset-3">
-    <div class="inline-h1" id="name-title"><h1><strong>More</strong></h1></div>
-    <p><a href="http://www.linkedin.com/in/pndurette">LinkedIn</a></p>
+    <div class="inline-h1" id="name-title"><h1><strong>Fin</strong></h1></div>
+    <div class="inline-p"><p><strong>This is still beta!<br/>Tip: reload if backgrounds are in the way—or for more goodness.</strong></p></div>
 </div> <!--/col-->
 </div> <!--/row-->    
+<div class="inline-p sticky hidden-sm hidden-xs"><p><strong><a href="{{ backgrounds[3].link_url }}">{{ backgrounds[3].title }}</a></strong></p></div>
 </section>
 </div> <!--/main-->
 </body>

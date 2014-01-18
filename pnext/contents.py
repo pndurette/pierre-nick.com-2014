@@ -6,7 +6,6 @@ from util.projects import MyProjects
 """ Various contents of the application """
 
 # We make one cache that will store everything
-# TODO Better caching management (manual, when a change is detected, etc.)
 cache = SimpleCache(default_timeout=30 * 24 * 60 * 60) # 30 days
 
 def cached_instagram():

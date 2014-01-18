@@ -3,13 +3,13 @@
         {
             "title": "My GitHub",
             "image": "nyantocat.gif",
-            "desc": "A few little things. Including this site. Need to be more active!",
+            "desc": "A few little things. Including <a href='https://github.com/pndurette/PierreNickWebNext'>this site</a>. Needs more activity.",
             "link": "https://github.com/pndurette"
         },
         {
             "title": "The Pow Box",
             "image": "thepowbox.png",
-            "desc": "A video gaming Web site I started with <a href='https://twitter.com/Code_Marsh'>@Code_Marsh</a> and <a href='https://twitter.com/eddiejdf'>@eddiejdf</a>.",
+            "desc": "A video gaming Web site that I started with <a href='https://twitter.com/Code_Marsh'>@Code_Marsh</a> and <a href='https://twitter.com/eddiejdf'>@eddiejdf</a>.",
             "link": "https://www.thepowbox.com"
         }
      ]

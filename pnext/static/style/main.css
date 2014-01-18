@@ -38,7 +38,7 @@ section {
 
 p {
     margin: 0;
-    text-shadow: 1px 1px 0px #808080;
+    text-shadow: 2px 2px 2px black;
 }
 
 a:link,
@@ -273,4 +273,10 @@ div.project-text p {
     -ms-transform: skew(0deg, -10deg);
     -o-transform: skew(0deg, -10deg);
     transform: skew(0deg, -10deg);
+}
+
+.sticky {
+    position: absolute;
+    left: 0;
+    bottom: -5px;
 }

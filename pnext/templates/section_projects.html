@@ -1,0 +1,22 @@
+<div class="row">
+<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+    <div class="inline-h1" id="name-title"><h1><strong>Projects</strong></h1></div>
+    <div class="row" style="padding: 0 15px;">
+
+        {% for p in projects %}
+        <div class="col-xs-12 col-sm-5 col-md-5 project">
+            <a href="{{ p.link }}"><div class="project-image"><img src="static/pics/{{ p.image }}" class="img-responsive"/></div></a>
+            <div class="project-text"><a href="{{ p.link }}"><div class="tag">{{ p.title }}</div></a><p>{{ p.desc | safe }}</p></div>
+        </div>
+        {% endfor %}
+
+    </div> <!--/row-->
+</div> <!--/col-->
+</div> <!--/row-->    
+
+<div class="row">
+<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+    <div class="inline-p"><p><strong>Hang in there, more to come!</strong></p></div>
+    <div class="chevron floating hidden-sm hidden-xs" onclick="$('#main').moveDown();"></div>
+</div> <!--/col-->
+</div> <!--/row-->    

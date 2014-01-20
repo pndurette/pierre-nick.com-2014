@@ -4,7 +4,7 @@ class MyProjects:
     PROJECTS_FILE = os.path.join(os.path.dirname(__file__), "../data/projects.json")
     
     def __init__(self):
-        self.__projects = json.load(open(MyProjects.PROJECTS_FILE))['projects']
+        self._projects = json.load(open(MyProjects.PROJECTS_FILE))['projects']
     
     def get_projects(self):
-        return self.__projects
+        return self._projects

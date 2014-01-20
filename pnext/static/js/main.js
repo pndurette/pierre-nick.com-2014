@@ -12,6 +12,18 @@
 
 // jQuery Main events
 $(window).load(function(){
+    // Tweaking viewport size for device scaling
+    w = $(window).width();
+    if (w < 1025 && w > 1000) {
+        // iPad
+        $('meta[name=viewport]').attr('content','width=device-width, initial-scale=1 minimum-scale=1, maximum-scale=1');
+    } else if ($(window).width() <= 1000) { 
+        // iPhone
+        $('meta[name=viewport]').attr('content','width=device-width, initial-scale=0.75, minimum-scale=0.75, maximum-scale=0.75');
+    }
+    //alert(w + " / " + $('meta[name=viewport]').attr('content'));
+
+    // OnePage Scroll, tweaked
     // https://github.com/peachananr/onepage-scroll
     // https://github.com/pndurette/onepage-scroll
     $("#main").onepage_scroll({

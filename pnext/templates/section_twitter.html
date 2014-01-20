@@ -1,10 +1,9 @@
 <div class="row">
 <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
     <div class="inline-h1" id="name-title"><h1><strong>Twitter</strong></h1></div>
-    <div class="inline-p"><p><strong>Big intense revealing week ahead! <a href="#">#WWDC</a> and <span class="blue">#E3!</span><span class="time">5 hours ago</span></strong></p></div>
-	<div class="inline-p"><p><strong>Great read: "The Anatomy of a Notification". Totally agree. RT <span class="blue">@rands</span> Well, my ass is vibrating, so it must be important: <span class="blue">j.mp/kxnh0l</span></strong></p><span class="time">5 hours ago</span></div>
-	<div class="inline-p"><p><strong><span class="blue">#html</span>: How to set padding for each line of a multi-line inline element: <span class="blue">http://bit.ly/kVqZZ6</span> Most elegant solution I've found.</strong></p><span class="time">5 hours ago</span></div>
-	<div class="inline-p"><p><strong>Helvetica Love Test Test Test Test Test <span class="blue">#fonts</span></strong></p><span class="time">5 hours ago</span></div>
+    {% for t in tweets %}
+    <div class="inline-p"><p><strong>{{ t.html | safe }} <span class="time">(<a href="{{ t.tweet_url }}">{{ t.created_at | timesince }}</a>)</span></strong></p></div>
+    {% endfor %}
     <div class="chevron floating hidden-sm hidden-xs" onclick="$('#main').moveDown();"></div>
 </div> <!--/col-->
 </div> <!--/row-->

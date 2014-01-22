@@ -1,18 +1,23 @@
-import os
+import ConfigParser, os
 from datetime import datetime
 from twython import Twython
 
 class MyTwitter:
-    APP_KEY = ''
-    APP_SECRET = ''
-    OAUTH_TOKEN = ''
-    OAUTH_TOKEN_SECRET = ''
+    CONFIG_FILE_LOC = os.path.join(os.path.dirname(__file__), "../data/api.config")
     DEFAULT_GET = 10
     T_URL = "https://www.twitter.com" 
     ME = "PierreNick"
 
     def __init__(self):
-        self._api = Twython(MyTwitter.APP_KEY, MyTwitter.APP_SECRET, MyTwitter.OAUTH_TOKEN, MyTwitter.OAUTH_TOKEN_SECRET)
+        # Load configuration
+        config = ConfigParser.ConfigParser()
+        config.readfp(open(MyTwitter.CONFIG_FILE_LOC))
+        self._app_key = config.get('twitter', 'APP_KEY')
+        self._app_secret = config.get('twitter', 'APP_SECRET')
+        self._oauth_token = config.get('twitter', 'OAUTH_TOKEN')
+        self._oauth_token_secret = config.get('twitter', 'OAUTH_TOKEN_SECRET')
+
+        self._api = Twython(self._app_key, self._app_secret, self._oauth_token, self._oauth_token_secret)
         self._tweets = self._load_my_tweets(count=MyTwitter.DEFAULT_GET)
 
     def _load_my_tweets(self, count):

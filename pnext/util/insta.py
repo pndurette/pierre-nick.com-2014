@@ -1,12 +1,17 @@
 from instagram.client import InstagramAPI
-import os, json, simplejson, random
+import ConfigParser, os, json, simplejson, random
 
 class MyInstagram:
     # Ex.: { 'instagrams' : [{ 'media_id': '474834340988151412_10974184', 'img_url': '', 'link_url': '', 'title': ''}, ... ]}
     DATA_FILE_LOC = os.path.join(os.path.dirname(__file__), "../data/instagrams.json")
-    ACCESS_TOKEN = ""
+    CONFIG_FILE_LOC = os.path.join(os.path.dirname(__file__), "../data/api.config")
     
     def __init__(self):
+        # Load configuration
+        config = ConfigParser.ConfigParser()
+        config.readfp(open(MyInstagram.CONFIG_FILE_LOC))
+        self._access_token = config.get('instagram', 'ACCESS_TOKEN') 
+
         self._instagrams_list = []
         self._load_data()
         self._augment_data()
@@ -20,7 +25,7 @@ class MyInstagram:
 
     def _augment_data(self):
         """ Populates any missing fields via api(media_id) """
-        api = InstagramAPI(access_token=MyInstagram.ACCESS_TOKEN)
+        api = InstagramAPI(access_token=self._access_token)
         for i in self._instagrams_list:
             if not i['img_url'] or not i['link_url']:
                 # Only do actual api query if we are missing something (ex: new entries)

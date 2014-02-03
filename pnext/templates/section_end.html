@@ -11,7 +11,7 @@
     <div class="inline-p"><p><strong>Tip: Backgrounds use some of my <a href="http://instagram.com/pierrenick">Instagrams</a>. (Reload if backgrounds are in the way —or to see more!—still working on this.</span>). They are:</strong></p></div>
 
     {% for img in backgrounds %}
-    <p><span class='blue'>Page {{ loop.index }}:</span> <a href="{{ img.link_url }}">{{ img.title if img.title else "&lt;Untitled&gt;" }}</a></p>    
+    <p><span class='blue'>Page {{ loop.index }}:</span> <a href="{{ img.link_url }}">{{ img.title if img.title else "<Untitled>" }}</a></p>    
     {% endfor %}
 </div> <!--/col-->
 </div> <!--/row-->

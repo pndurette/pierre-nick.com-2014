@@ -1,6 +1,6 @@
 <div class="row">
 <div class="col-md-6 col-md-offset-3">
-    <div class="inline-h1" id="name-title"><h1><strong>More</strong></h1></div>
+    <div class="inline-h1" id="name-title"><h1><strong>Finally</strong></h1></div>
     <div class="inline-p"><p><strong>My <a href="http://cv.pierre-nick.com/docs/pndurette-resume.pdf">Resume</a>. My <a href="http://ca.linkedin.com/in/pndurette/">LinkedIn</a>.</strong></p></div>
    
 </div> <!--/col-->
@@ -8,10 +8,10 @@
 
 <div class="row">
 <div class="col-md-6 col-md-offset-3">
-    <div class="inline-p"><p><strong>Tip: Backgrounds use some of my <a href="http://instagram.com/pierrenick">Instagrams</a>. (Reload if backgrounds are in the way —or to see more!—still working on this.</span>). They are:</strong></p></div>
+    <div class="inline-p"><p><strong>Random backgrounds via my <a href="http://instagram.com/pierrenick">Instagram</a>:</strong></p></div>
 
     {% for img in backgrounds %}
-    <p><span class='blue'>Page {{ loop.index }}:</span> <a href="{{ img.link_url }}">{{ img.title if img.title else "<Untitled>" }}</a></p>    
+    <p><span class='blue'>{{ loop.index }}.</span> <a href="{{ img.link_url }}">{{ img.title if img.title else "Untitled" }}</a></p>    
     {% endfor %}
 </div> <!--/col-->
 </div> <!--/row-->

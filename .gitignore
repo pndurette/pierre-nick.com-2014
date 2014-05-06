@@ -1,4 +1,5 @@
 misc/
+api.config
 
 .DS_Store
 *.py[cod]

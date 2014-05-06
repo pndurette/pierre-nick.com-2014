@@ -5,9 +5,12 @@
 {% for section in ['section_intro', 'section_twitter', 'section_projects', 'section_end'] %}
 {% set img = backgrounds[loop.index0] %}
 
-<section style="background-image:url('{{ img.img_url }}');">
-{% include "%s.html" % section %}
-<div class="inline-p sticky hidden-sm hidden-xs"><p><strong><a href="{{ img.link_url }}">{{ img.title }}</a></strong></p></div>
+<section>
+<div class="bg" style="background-image:url('{{ img.img_url }}');" ></div>
+<div class="content">
+    {% include "%s.html" % section %}
+    <div class="inline-p sticky hidden-sm hidden-xs"><p><strong><a href="{{ img.link_url }}">{{ img.title }}</a></strong></p></div>
+</div> <!-- /.content -->    
 </section>
 
 {% endfor %}

@@ -1,9 +1,11 @@
 <!doctype html>
 <html>
 <head>
-    <title>{% block title %}{% endblock %}</title>
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <base target="_blank">
+
+    {% include "meta.html" %} 
 
     <!-- jQuery --> 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -11,14 +13,18 @@
     <!-- Bootstrap -->
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel='stylesheet' type='text/css'>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    
-    <!-- Fonts -->    
+
+        <!-- Fonts -->    
 	<link href='http://fonts.googleapis.com/css?family=Lato:900italic' rel='stylesheet' type='text/css'>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="static/style/animations.css" /> 
     <link rel="stylesheet" type="text/css" href="static/style/main.css" />
     <script src="static/js/main.js"></script>
+    
+    <!-- blur.js -->
+    <script src="static/js/blur.js"></script>
+
 </head>
 <body>
 <div class="container-fluid" id="main" style="padding: 0">

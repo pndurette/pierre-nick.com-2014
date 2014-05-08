@@ -1,0 +1,20 @@
+{% set title = "Pierre Nicolas Durette" -%}
+{% set url = "http://pierre-nick.com" -%}
+{% set desc = "Montreal expat in Toronto, I do software, Web and other shenanigans." -%}
+{% set image = url + url_for('static', filename='pics/pn-banner.png') -%}
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ desc }}" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@PierreNick">
+    <meta name="twitter:title" content="{{ title }}">
+    <meta name="twitter:description" content="{{ desc }}">
+    <meta name="twitter:image:src" content="{{ image }}">
+
+    <!-- Facebook -->
+    <meta property="og:title" content="{{ title }}"/>
+    <meta property="og:description" content="{{ desc }}">
+    <meta property="og:url" content="{{ url }}"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="{{ image }}"/>

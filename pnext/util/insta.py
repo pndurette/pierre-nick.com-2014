@@ -1,4 +1,5 @@
 from instagram.client import InstagramAPI
+from colorweave import palette
 import ConfigParser, os, json, simplejson, random
 
 class MyInstagram:
@@ -27,12 +28,13 @@ class MyInstagram:
         """ Populates any missing fields via api(media_id) """
         api = InstagramAPI(access_token=self._access_token)
         for i in self._instagrams_list:
-            if not i['img_url'] or not i['link_url']:
+            if not 'img_url' in i or not 'link_url' in i or not 'main_color' in i:
                 # Only do actual api query if we are missing something (ex: new entries)
                 media = api.media(i['media_id'])
                 i['title'] = media.caption.text if media.caption else ""
                 i['img_url'] = media.images['standard_resolution'].url
                 i['link_url'] = media.link
+                i['main_color'] = palette(url=i['img_url'], n=1)[0] # First in palette
                 print "Loaded new media: '%s' (title: '%s')" % (i['media_id'], i['title'])
 
     def _save_data(self):

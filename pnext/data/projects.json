@@ -3,8 +3,20 @@
         {
             "title": "My GitHub",
             "image": "nyantocat.gif",
-            "desc": "A few little things. Including <a href='https://github.com/pndurette/PierreNickWebNext'>this site</a>.",
+            "desc": "A few things I've worked on. Including <a href='https://github.com/pndurette/PierreNickWebNext'>this site</a>.",
             "link": "https://github.com/pndurette"
+        },
+        {
+            "title": "gTTS",
+            "image": "alert.jpg",
+            "desc": "A fun Python interface to Google's Text to Speech API.",
+            "link": "https://github.com/pndurette/gTTS"
+        }, 
+        {
+            "title": "viatools",
+            "image": "train-icon.png",
+            "desc": "Python tools and utils to retrieve and work with <a href='http://www.viarail.ca'>VIA Rail Canada</a> data (such as stations, trips, boarding passes, reservations). Part of a larger work-in-progress.",
+            "link": "https://github.com/pndurette/viatools"
         },
         {
             "title": "Critical Reading Skills",

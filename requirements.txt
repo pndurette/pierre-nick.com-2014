@@ -1,3 +1,5 @@
+# Note, for PIL: pip install -r requirements.txt --allow-external PIL --allow-unverified PIL
+
 Flask==0.10.1
 Jinja2==2.7.1
 MarkupSafe==0.18
@@ -5,7 +7,6 @@ PIL==1.1.7
 Pillow==1.7.8
 Werkzeug==0.9.4
 colormath==1.0.9
--e git+https://github.com/jyotiska/colorweave.git@f7af9edfd025de83e2f8003090f641735d97f5fb#egg=colorweave
 ecdsa==0.10
 httplib2==0.8
 itsdangerous==0.23
@@ -21,3 +22,4 @@ ssh==1.8.0
 twython==3.1.2
 webcolors==1.4
 wsgiref==0.1.2
+-e git+https://github.com/jyotiska/colorweave.git@f7af9edfd025de83e2f8003090f641735d97f5fb#egg=colorweave
